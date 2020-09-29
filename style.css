@@ -1,0 +1,507 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "IBM Plex Sans";
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+* {
+  color: #060a24; }
+
+.menu {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  height: 44px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 4; }
+  .menu .logo_azul {
+    height: 24px;
+    margin-left: 15px;
+    width: 24px; }
+  .menu .hamburguesa {
+    cursor: pointer;
+    font-size: 16px;
+    height: 15px;
+    margin-right: 15px;
+    width: 15px;
+    z-index: 5; }
+    .menu .hamburguesa i {
+      font-size: 16px; }
+  .menu .check {
+    display: none; }
+    .menu .check:checked ~ .lista {
+      background-color: rgba(0, 0, 236, 0.8);
+      display: flex;
+      flex-direction: column;
+      line-height: 48px;
+      position: absolute;
+      right: 0px;
+      top: 44px;
+      width: 100vw;
+      z-index: 5; }
+    .menu .check:checked ~ .cruz {
+      display: block;
+      margin-right: 16px; }
+    .menu .check:checked ~ .hamburguesa {
+      display: none; }
+  .menu .lista {
+    display: none; }
+    .menu .lista li a {
+      color: #ffffff;
+      font-family: "IBM Plex Mono", monospace;
+      margin-left: 16px;
+      text-align: left;
+      text-decoration: none; }
+  .menu .cruz {
+    display: none; }
+
+.separacion {
+  height: 44px;
+  position: relative;
+  width: 100%; }
+
+h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 42px;
+  margin-left: 15px;
+  margin-top: 30px;
+  position: relative; }
+
+.boton {
+  align-items: center;
+  background-color: #00f3bb;
+  cursor: pointer;
+  display: flex;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  width: 256px; }
+  .boton:hover {
+    background-image: linear-gradient(90deg, #00f3bb, #0000ff); }
+    .boton:hover a {
+      color: #ffffff; }
+  .boton a {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    text-align: center; }
+
+.spotify {
+  margin-left: 15px;
+  margin-top: 40px;
+  position: relative; }
+  .spotify .titulo-spotify {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 500; }
+  .spotify .punto::after {
+    background-color: #0000ff;
+    border-radius: 3px;
+    content: " ";
+    height: 5px;
+    left: 3px;
+    position: relative;
+    top: 27px;
+    width: 5px; }
+  .spotify span {
+    text-decoration: line-through; }
+  .spotify .parrafo-spotify {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 36px;
+    margin-top: 16px; }
+  .spotify .boton {
+    left: 7%; }
+
+.episodios {
+  height: 1200px;
+  margin-top: 70px;
+  position: relative; }
+  .episodios .fondo_color {
+    background-image: linear-gradient(#0000ff, #0000a3);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: relative;
+    right: 0;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+    top: 0;
+    width: 100%; }
+  .episodios h2 {
+    color: #ffffff;
+    position: absolute;
+    top: 0px; }
+  .episodios .linsk-spotify {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 90px; }
+    .episodios .linsk-spotify iframe {
+      margin-bottom: 11px;
+      width: 298px; }
+
+.celular {
+  left: 0px;
+  position: relative;
+  top: -90px;
+  width: 300px;
+  z-index: 2; }
+
+.donde-venimos {
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+  .donde-venimos .textos {
+    position: relative;
+    text-align: left;
+    width: 90%; }
+    .donde-venimos .textos h2 {
+      margin-bottom: 0;
+      margin-left: 0;
+      position: relative;
+      top: -40px; }
+    .donde-venimos .textos p {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      line-height: 22px;
+      position: relative;
+      top: -30px; }
+
+.invitados {
+  display: flex;
+  flex-direction: column; }
+  .invitados h2 {
+    margin-bottom: 15px; }
+  .invitados img {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0; }
+
+.iconos {
+  position: relative;
+  top: 30px; }
+  .iconos .nuestros-temas {
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    top: 40px; }
+    .iconos .nuestros-temas div {
+      margin-bottom: 15px; }
+  .iconos h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 15px; }
+
+.novedades {
+  height: 350px;
+  position: relative;
+  top: 40px; }
+  .novedades .news {
+    align-items: center;
+    background-image: linear-gradient(#0000ff, #0000a3);
+    clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    top: 0; }
+    .novedades .news h2 {
+      color: #ffffff;
+      position: relative;
+      top: 40px; }
+    .novedades .news .boton {
+      position: relative;
+      top: 70px; }
+
+footer {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 2; }
+  footer p {
+    text-align: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px; }
+  footer .redes_sociales {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 7px; }
+
+@media screen and (min-width: 767px) {
+  .menu {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 80px;
+    padding: 0px 100px;
+    width: 87%; }
+    .menu .logo_azul {
+      height: 36px;
+      width: 36px; }
+    .menu .lista {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      right: 10px;
+      text-align: right;
+      top: 0px; }
+      .menu .lista li {
+        margin-right: 10px; }
+        .menu .lista li a {
+          color: #060a24; }
+          .menu .lista li a:hover {
+            color: #00f3bb;
+            text-decoration: line-through; }
+          .menu .lista li a:active {
+            color: rgba(6, 10, 36, 0.56);
+            text-decoration: line-through; }
+    .menu .hamburguesa {
+      display: none; }
+
+  .separacion {
+    height: 88px; }
+
+  h2 {
+    font-size: 48px;
+    margin-left: 200px; }
+
+  .spotify {
+    margin: 100px 200px; }
+    .spotify .titulo-spotify {
+      font-size: 64px;
+      display: inline;
+      position: relative; }
+    .spotify .punto {
+      position: relative; }
+      .spotify .punto::after {
+        content: " ";
+        border-radius: 5px;
+        height: 10px;
+        left: 378px;
+        top: 56px;
+        position: absolute;
+        width: 10px; }
+    .spotify .parrafo-spotify {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 628px; }
+    .spotify .boton {
+      left: 0; }
+
+  .episodios {
+    height: 850px;
+    top: 50px; }
+    .episodios h2 {
+      margin-top: 50px; }
+    .episodios .linsk-spotify {
+      justify-content: space-evenly;
+      margin-top: 50px; }
+      .episodios .linsk-spotify iframe {
+        width: 584px; }
+
+  .donde-venimos {
+    display: grid;
+    grid-template-columns: 200px 457px 62px 464px 257px;
+    grid-template-rows: 190px 86px 204px 180px;
+    position: relative;
+    top: -100px; }
+    .donde-venimos .celular {
+      grid-column: 2 / 3;
+      grid-row: 1 / 5;
+      height: 660px;
+      top: 0;
+      width: 400px; }
+    .donde-venimos .textos {
+      grid-column: 4 / 5;
+      grid-row: 2 / 4; }
+      .donde-venimos .textos p {
+        font-size: 16px;
+        top: 0; }
+
+  .invitados h2 {
+    margin-bottom: 36px;
+    margin-top: 0; }
+  .invitados .fotos_invitados {
+    display: flex;
+    flex-wrap: wrap; }
+    .invitados .fotos_invitados img {
+      max-width: 33.3%; }
+
+  .iconos {
+    margin-bottom: 50px; }
+    .iconos h2 {
+      margin-bottom: 36px; }
+    .iconos .nuestros-temas {
+      display: flex;
+      height: auto;
+      justify-content: space-between;
+      margin: 0 200px; }
+
+  .novedades {
+    height: 520px; }
+    .novedades .news {
+      clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+      display: flex; }
+      .novedades .news h2 {
+        margin: 200px 0 0 0; }
+      .novedades .news .boton {
+        height: 56px;
+        margin-top: 20px;
+        width: 345px; }
+
+  footer {
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 100px; }
+    footer .redes_sociales {
+      width: 232px; } }
+
+/*# sourceMappingURL=style.css.map */
