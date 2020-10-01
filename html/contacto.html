@@ -17,16 +17,16 @@
 <body>
     <header>
         <nav class="menu">
-            <img class="logo_marca" src="./assets/logo.png" alt="logotipo">
+            <img class="logo_marca" src="../assets/logo.png" alt="logotipo">
             <div>
                 <input type="checkbox" name="check" id="check" class="check" />
                 <label class="hamburguesa" for="check"><i class="fas fa-bars"></i></label>
                 <label class="cruz" for="check"><i class="fas fa-times"></i></label>
                 <ul class="lista">
+                    <li><a href="/index.html">INICIO</a></li>
                     <li><a href="/html/catalogo.html">CATALOGO</a></li>
-                    <li><a href="html/planes.html">PLANES</a></li>
-                    <li><a href="html/sucursales.html">SUCURSALES</a></li>
-                    <li><a href="html/contacto.html">CONTACTO</a></li>
+                    <li><a href="/html/planes.html">PLANES</a></li>
+                    <li><a href="/html/sucursales.html">SUCURSALES</a></li>
                 </ul>
             </div>
         </nav>
@@ -34,31 +34,38 @@
 
     <div class="separacion"></div>
 
-    <section class="eslogan">
-        <h1 class="titulo-eslogan">Quatum Automotores</h1>
-        <h1 class="titulo-eslogan punto"></h1>
-        <p class="parrafo-eslogan"> Hay momentos que no se olvidan nunca más. Uno de ellos es la entrega de la llave de tu primer auto. ¡Que emoción!</p>
-    </section>
-
-    <section class="inicio" >
-        <h2>Tu primer auto te esta esperando</h2>
-        <div class="fotos_inicio">          
-            <img src="./assets/2.jpg"  />
-            <img src="./assets/1.jpg" />
-            <img src="./assets/3.jpg"  />
-    
-        </div>
+    <section  class="catalogo" >
+        <h2> Estamos para ayudarte! </h2>
+        <div class="formulario">
+            <form action="">
+                <label for="name">Nombre y Apellido:</label>
+                <input type="text" name="Nombre" placeholder="Nombre">
+                <label for="phone">Telefono:</label>
+                <input type="text" name="Nombre" placeholder="1111-1111">
+                <label for="mail">Mail:</label>
+                <input type="text" name="Mail"placeholder="ejemplo@mail.com">
+                <textarea name="consulta" id="" cols="30" rows="10" placeholder="Escribe aquí tu consulta"></textarea><br><br>
+                <button type="text" onclick="alert('En breve te estaremos respondiendo')">Enviar</button>
+            </form>
+        </div>    
     </section>
 
     <footer>
         <p>©2020 Quatum Automotores</p>
         <div class="redes_sociales">
+            <a href="https://www.spotify.com/ar/"><i class="fab fa-spotify"></i></a>
             <a href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></a>
             <a href="https://web.facebook.com/"><i class="fab fa-facebook"></i></a>
             <a href="https://telegram.org/"><i class="fab fa-telegram"></i></a>
         </div>
     </footer>
+
 </body>
 
-</html>
+
+
+
+
+
+
